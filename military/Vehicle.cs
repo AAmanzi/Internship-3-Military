@@ -21,13 +21,13 @@ namespace military
                 $"Average speed {AverageSpeedInKmPh}km/h\n" +
                 $"Fuel comsuption: {FuelConsumptionInLitres}L/100km\n" +
                 $"Capacity: {CapacityInNumberOfPeople} people\n" +
-                $"Total fuel consumption: {FuelConsuptionTotal(DistanceToCover, PeopleToTransport)}Litres\n";
+                $"Total fuel consumption: {FuelConsuptionTotal(DistanceToCover)}Litres\n";
         }
 
-        public int FuelConsuptionTotal(int distanceInKm, int peopleToTransport)
+        public int FuelConsuptionTotal(int distanceInKm)
         {
-            var totalTrips = peopleToTransport / CapacityInNumberOfPeople;
-            if (peopleToTransport % CapacityInNumberOfPeople != 0)
+            var totalTrips = PeopleToTransport / CapacityInNumberOfPeople;
+            if (PeopleToTransport % CapacityInNumberOfPeople != 0)
                 totalTrips++;
             totalTrips = totalTrips + (totalTrips - 1);
 
