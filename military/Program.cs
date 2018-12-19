@@ -74,20 +74,24 @@ namespace military
                     bestTransport = "Amphibian";
                 }
 
-                Console.WriteLine($"The best option for transport is: {bestTransport}");
+                Console.WriteLine($"\nThe best option for transport is: {bestTransport}");
 
                 switch (bestTransport)
                 {
                     case ("Tank"):
-                        myTank.Print(totalDistanceTank, peopleToTransport);
+                        Console.WriteLine(myTank.Print(totalDistanceTank, peopleToTransport));
                         break;
                     case ("Warship"):
-                        myWarship.Print(totalDistanceWarship, peopleToTransport);
+                        Console.WriteLine(myWarship.Print(totalDistanceWarship, peopleToTransport));
                         break;
                     case ("Amphibian"):
-                        myAmphibian.Print(totalDistanceAmphibian, peopleToTransport);
+                        Console.WriteLine(myAmphibian.Print(totalDistanceAmphibian, peopleToTransport));
                         break;
                 }
+
+                Console.WriteLine("\nAmphibian Fuel: " + totalFuelConsumptionAmphibian);
+                Console.WriteLine("Tank Fuel: " + totalFuelConsumptionTank);
+                Console.WriteLine("Warship Fuel: " + totalFuelConsumptionWarship + "\n");
 
                 Console.WriteLine("Would you like to make another shipment?");
                 Console.WriteLine("Press Y for Yes");
