@@ -6,6 +6,8 @@ namespace military
 {
     public sealed class Tank : Vehicle, IDriveable
     {
+        
+
         public Tank(int weightInKg, int averageSpeedInKmPh)
         {
             VehicleID = Guid.NewGuid();

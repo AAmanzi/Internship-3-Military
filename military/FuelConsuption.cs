@@ -10,11 +10,4 @@ namespace military
         Amphibia = 70,
         Warship = 200
     }
-
-    public enum Capacity
-    {
-        Tank = 6,
-        Amphibia = 20,
-        Warship = 50
-    }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace military
 {
-    public sealed class Amphibia : Vehicle
+    public sealed class Amphibia : Vehicle, ISwimmable, IDriveable
     {
         public Amphibia(int weightInKg, int averageSpeedInKmPh)
         {
