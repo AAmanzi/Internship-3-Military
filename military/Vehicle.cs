@@ -21,7 +21,7 @@ namespace military
                 $"Capacity: {CapacityInNumberOfPeople} people\n";
         }
 
-        public string Print(int distanceInKm, int peopleToTransport )
+        public string Print(int distanceInKm, int peopleToTransport)
         {
             return ToString() +
                 $"Total fuel consumption: {FuelConsumptionTotal(distanceInKm, peopleToTransport)}";
