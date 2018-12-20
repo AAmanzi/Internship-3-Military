@@ -20,7 +20,7 @@ namespace military.Classes
         public int Swim(int distanceInKm)
         {
             var newDistance = distanceInKm;
-            var timeToTravelInMinutes = (distanceInKm / AverageSpeedInKmPh) / 60;
+            var timeToTravelInMinutes = (distanceInKm / AverageSpeedInKmPh) * 60;
 
             for (int i = 0; i < timeToTravelInMinutes / 10; i++)
             {
