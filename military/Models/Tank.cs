@@ -4,18 +4,16 @@ using System.Text;
 using military.Enums;
 using military.Interfaces;
 
-namespace military.Classes
+namespace military.Models
 {
     public sealed class Tank : Vehicle, IDriveable
     {
         
 
         public Tank(int weightInKg, int averageSpeedInKmPh)
+            : base(weightInKg, averageSpeedInKmPh)
         {
-            VehicleID = Guid.NewGuid();
-            WeightInKg = weightInKg;
-            AverageSpeedInKmPh = averageSpeedInKmPh;
-            FuelConsumptionInLitres = (int)FuelConsuption.Tank;
+            FuelConsumptionInLitres = (int)FuelConsumption.Tank;
             CapacityInNumberOfPeople = (int)Capacity.Tank;
         }
 

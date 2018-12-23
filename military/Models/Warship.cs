@@ -4,16 +4,14 @@ using System.Text;
 using military.Enums;
 using military.Interfaces;
 
-namespace military.Classes
+namespace military.Models
 {
     public sealed class Warship : Vehicle, ISwimmable
     {
         public Warship(int weightInKg, int averageSpeedInKmPh)
+            : base(weightInKg, averageSpeedInKmPh)
         {
-            VehicleID = Guid.NewGuid();
-            WeightInKg = weightInKg;
-            AverageSpeedInKmPh = averageSpeedInKmPh;
-            FuelConsumptionInLitres = (int)FuelConsuption.Warship;
+            FuelConsumptionInLitres = (int)FuelConsumption.Warship;
             CapacityInNumberOfPeople = (int)Capacity.Warship;
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace military.Classes
+namespace military.Models
 {
     public abstract class Vehicle
     {
@@ -12,18 +12,20 @@ namespace military.Classes
         public int FuelConsumptionInLitres { get; set; }
         public int CapacityInNumberOfPeople { get; set; }
 
-        public override string ToString()
+        public Vehicle(int weightInKg, int averageSpeedInKmPh)
         {
-            return $"ID: {VehicleID}\n" +
-                $"Weight: {WeightInKg}kg\n" +
-                $"Average speed {AverageSpeedInKmPh}km/h\n" +
-                $"Fuel comsuption: {FuelConsumptionInLitres}L/100km\n" +
-                $"Capacity: {CapacityInNumberOfPeople} people\n";
+            VehicleID = Guid.NewGuid();
+            WeightInKg = weightInKg;
+            AverageSpeedInKmPh = averageSpeedInKmPh;
         }
 
         public string Print(int distanceInKm, int peopleToTransport)
         {
-            return ToString() +
+            return $"ID: {VehicleID}\n" +
+                $"Weight: {WeightInKg}kg\n" +
+                $"Average speed {AverageSpeedInKmPh}km/h\n" +
+                $"Fuel comsumption: {FuelConsumptionInLitres}L/100km\n" +
+                $"Capacity: {CapacityInNumberOfPeople} people\n" +
                 $"Total fuel consumption: {FuelConsumptionTotal(distanceInKm, peopleToTransport)}";
         }
 

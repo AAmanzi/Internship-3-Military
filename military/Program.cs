@@ -1,5 +1,5 @@
 ﻿using System;
-using military.Classes;
+using military.Models;
 using military.Enums;
 using military.Interfaces;
 
@@ -11,7 +11,7 @@ namespace military
         {
             var myTank = new Tank(68000, 70);
             var myWarship = new Warship(35000, 80);
-            var myAmphibian = new Amphibia(23000, 40);
+            var myAmphibian = new Amphibian(23000, 40);
 
             Console.WriteLine("Greetings!\nI see you're in need of " +
                     "troop transport!\n");
@@ -78,7 +78,7 @@ namespace military
                 var totalFuelConsumptionAmphibian = myWarship.FuelConsumptionTotal
                     (totalDistanceAmphibian, peopleToTransport);
 
-                var bestTransport = LeastFuelSpent(totalFuelConsumptionTank, 
+                var bestTransport = Utility.LeastFuelSpent(totalFuelConsumptionTank, 
                     totalFuelConsumptionWarship, totalFuelConsumptionAmphibian);
 
                 Console.WriteLine($"\nThe best option for transport is: {bestTransport}");
@@ -104,23 +104,6 @@ namespace military
                 Console.WriteLine("|___________________________|");
             }
             while (Console.ReadKey().Key == ConsoleKey.Y);
-        }
-
-        static string LeastFuelSpent(int fuelTankSpent, int fuelWarshipSpent, int fuelAmphibianSpent)
-        {
-            var leastFuelConsumption = fuelTankSpent;
-            var bestTransport = "Tank";
-            if (leastFuelConsumption > fuelWarshipSpent)
-            {
-                leastFuelConsumption = fuelWarshipSpent;
-                bestTransport = "Warship";
-            }
-            if (leastFuelConsumption > fuelAmphibianSpent)
-            {
-                leastFuelConsumption = fuelAmphibianSpent;
-                bestTransport = "Amphibian";
-            }
-            return bestTransport;
         }
     }
 }

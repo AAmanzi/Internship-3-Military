@@ -4,17 +4,15 @@ using System.Text;
 using military.Enums;
 using military.Interfaces;
 
-namespace military.Classes
+namespace military.Models
 {
-    public sealed class Amphibia : Vehicle, ISwimmable, IDriveable
+    public sealed class Amphibian : Vehicle, ISwimmable, IDriveable
     {
-        public Amphibia(int weightInKg, int averageSpeedInKmPh)
+        public Amphibian(int weightInKg, int averageSpeedInKmPh)
+            : base (weightInKg, averageSpeedInKmPh)
         {
-            VehicleID = Guid.NewGuid();
-            WeightInKg = weightInKg;
-            AverageSpeedInKmPh = averageSpeedInKmPh;
-            FuelConsumptionInLitres = (int)FuelConsuption.Amphibia;
-            CapacityInNumberOfPeople = (int)Capacity.Amphibia;
+            FuelConsumptionInLitres = (int)FuelConsumption.Amphibian;
+            CapacityInNumberOfPeople = (int)Capacity.Amphibian;
         }
 
         public int Swim(int distanceInKm)

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace military.Enums
 {
-    public enum FuelConsuption
+    public enum FuelConsumption
     {
         Tank = 30,
-        Amphibia = 70,
+        Amphibian = 70,
         Warship = 200
     }
 }
