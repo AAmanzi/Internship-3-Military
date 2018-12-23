@@ -4,7 +4,7 @@ using System.Text;
 
 namespace military
 {
-    class Utility
+    public class Utility
     {
         public static string LeastFuelSpent(int fuelTankSpent, int fuelWarshipSpent, 
             int fuelAmphibianSpent)

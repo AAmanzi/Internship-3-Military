@@ -24,7 +24,7 @@ namespace military.Models
             return $"ID: {VehicleID}\n" +
                 $"Weight: {WeightInKg}kg\n" +
                 $"Average speed {AverageSpeedInKmPh}km/h\n" +
-                $"Fuel comsumption: {FuelConsumptionInLitres}L/100km\n" +
+                $"Fuel consumption: {FuelConsumptionInLitres}L/100km\n" +
                 $"Capacity: {CapacityInNumberOfPeople} people\n" +
                 $"Total fuel consumption: {FuelConsumptionTotal(distanceInKm, peopleToTransport)}";
         }

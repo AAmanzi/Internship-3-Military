@@ -20,7 +20,7 @@ namespace military.Models
             var newDistance = distanceInKm;
             var timeToTravelInMinutes = (distanceInKm / AverageSpeedInKmPh) * 60;
 
-            for (int i = 0; i < timeToTravelInMinutes / 10; i++)
+            for (var i = 0; i < timeToTravelInMinutes / 10; i++)
             {
                 if (new Random().Next(0, 100) < 50)
                     newDistance += 3;

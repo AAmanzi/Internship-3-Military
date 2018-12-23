@@ -21,7 +21,7 @@ namespace military.Models
         {
             var newDistance = distanceInKm;
 
-            for (int i = 0; i < distanceInKm / 10; i++)
+            for (var i = 0; i < distanceInKm / 10; i++)
             {
                 if (new Random().Next(0, 100) < 30)
                     newDistance += 5;
